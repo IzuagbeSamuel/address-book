@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/jquery-3.6.0.js"></script>
+    <script src="js/script.js"></script>
+    <script src="https://kit.fontawesome.com/a15138ce98.js" crossorigin="anonymous"></script>
+    <title>Address Book</title>
+  </head>
+  <body>
+    <h1><span class="fas fa-address-book"></span> Address Book</h1>
+    <div class="contact-section">
+      <h3>Add a Contact</h3>
+      <form id="new-contact">
+        <label for="new-first-name">First Name</label>
+        <br>
+        <input type="text" id="new-first-name" />
+        <br />
+        <label for="new-last-name">Last Name</label>
+        <br>
+        <input type="text" id="new-last-name" />
+        <br />
+        <label for="new-phone-number">Phone Number</label>
+        <br>
+        <input type="text" id="new-phone-number" />
+        <br />
+        <label for="new-email">Email Address</label>
+        <br>
+        <input type="email" id="new-email" /><span class="fas fa-caret-down" id="dropDown2" onclick="ShowEmail()"></span>
+        <br />
+
+        <div class="other-emails" id="other-emails">
+          <label for="work-email">Work Email</label>
+          <br>
+          <input type="text" id="new-work-email" />
+        </div>
+
+        <label for="new-address">Home Address</label>
+        <br>
+        <input type="text" id="new-address" /><span class="fas fa-caret-down" id="dropDown" onclick="ShowAddress()"></span>
+        <br />
+
+        <div class="other-addresses" id="other-addresses">
+          <label for="new-work-address">Work Address</label>
+          <br>
+          <input type="text" id="new-work-address" />
+          <br />
+
+          <label for="new-other-address">Other Address</label>
+          <br>
+          <input type="text" id="new-other-address" />
+          <br />
+        </div>
+        <br>
+
+        <button type="submit">Add</button>
+      </form>
+    </div>
+
+    <h2>Contacts:</h2>
+    <ul id="contacts"></ul>
+
+    <div id="show-contact">
+      <p>First Name: <span class="first-name"></span></p>
+      <p>Last Name: <span class="last-name"></span></p>
+      <p>Phone Number: <span class="phone-number"></span></p>
+      <p>Email Address: <span class="email"></span></p>
+      <ul>
+        <li class="work-email"></li>
+      </ul>
+      <p>Address: <span class="address"></span></p>
+      <ul>
+        <li class="work-address"></li>
+        <li class="other-address"></li>
+      </ul>
+      <div id="buttons"></div>
+    </div>
+  </body>
+</html>
